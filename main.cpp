@@ -9,7 +9,8 @@
 
 using namespace std;
 
-vector<int> TakeEvens(const vector<int>& numbers) {
+vector<int> TakeEvens(const vector<int>& numbers) 
+{
     vector<int> evens;
     for (int x : numbers) {
         if (x % 2 == 0) {
@@ -19,7 +20,8 @@ vector<int> TakeEvens(const vector<int>& numbers) {
     return evens;
 }
 
-map<string, int> TakeAdults(const map<string, int>& people) {
+map<string, int> TakeAdults(const map<string, int>& people) 
+{
     map<string, int> adults;
     for (const auto& [name, age] : people) {
         if (age >= 18) {
@@ -29,13 +31,17 @@ map<string, int> TakeAdults(const map<string, int>& people) {
     return adults;
 }
 
-bool IsPrime(int n) {
-    if (n < 2) {
+bool IsPrime(int n) 
+{
+    if (n < 2) 
+    {
         return false;
     }
     int i = 2;
-    while (i * i <= n) {
-        if (n % i == 0) {
+    while (i * i <= n) 
+    {
+        if (n % i == 0) 
+        {
             return false;
         }
         ++i;
@@ -43,10 +49,13 @@ bool IsPrime(int n) {
     return true;
 }
 
-set<int> TakePrimes(const set<int>& numbers) {
+set<int> TakePrimes(const set<int>& numbers) 
+{
     set<int> primes;
-    for (int number : numbers) {
-        if (IsPrime(number)) {
+    for (int number : numbers) 
+    {
+        if (IsPrime(number)) 
+        {
             primes.insert(number);
         }
     }
